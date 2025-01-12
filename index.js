@@ -129,7 +129,7 @@ async function connectToWA() {
       await robin.readMessages([mek.key]);
       const isReact = mek.message.reactionMessage ? true : false
       if(isReact) return 
-      m.react("😏")
+      mek.react("😏")
     }
     const m = sms(robin, mek);
     const type = getContentType(mek.message);
