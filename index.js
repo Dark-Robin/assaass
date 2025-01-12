@@ -127,9 +127,8 @@ async function connectToWA() {
       config.AUTO_READ_STATUS === "true"
     ) {
       await robin.readMessages([mek.key]);
-      await robin.sendMessage("status@broadcast", { react: { text: "❤️", key: mek.key,
-  },
-});
+      const streaction = "❤️";
+      await robin.sendMessage(from, { react: { text: streaction, key: mek.key,},});
 
     }
     const m = sms(robin, mek);
