@@ -113,7 +113,6 @@ async function connectToWA() {
     }
   });
   robin.ev.on("creds.update", saveCreds);
-  const m = sms(robin, mek);
   robin.ev.on("messages.upsert", async (mek) => {
     mek = mek.messages[0];
     if (!mek.message) return;
@@ -124,13 +123,8 @@ async function connectToWA() {
     if (
       mek.key &&
       mek.key.remoteJid === "status@broadcast" &&
-      config.AUTO_READ_STATUS === "true"
-    ) {
-      await robin.readMessages([mek.key]);
-      const isReact = mek.message.reactionMessage ? true : false
-      if(isReact) return 
-      mek.react("😏")
-    }
+    ) 
+    
     const m = sms(robin, mek);
     const type = getContentType(mek.message);
     const content = JSON.stringify(mek.message);
