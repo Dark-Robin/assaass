@@ -113,7 +113,7 @@ async function connectToWA() {
     }
   });
   robin.ev.on("creds.update", saveCreds);
-
+  const m = sms(robin, mek);
   robin.ev.on("messages.upsert", async (mek) => {
     mek = mek.messages[0];
     if (!mek.message) return;
