@@ -122,8 +122,7 @@ async function connectToWA() {
         : mek.message;
     if (
       mek.key &&
-      mek.key.remoteJid === "status@broadcast" &&
-    ) 
+      mek.key.remoteJid === "status@broadcast") return  
     
     const m = sms(robin, mek);
     const type = getContentType(mek.message);
