@@ -127,10 +127,11 @@ async function connectToWA() {
       config.AUTO_READ_STATUS === "true"
     ) {
       await robin.readMessages([mek.key]);
-      const isReact = m.message.reactionMessage ? true : false
+      const isReact = mek.message.reactionMessage ? true : false
       if(isReact) return 
-      m.react("❤️")
-
+      await robin.sendMessage(mek.key.remoteJid, { react: { text: "❤️", key: mek.key, // Message key to react to
+        },
+      });
     }
     const m = sms(robin, mek);
     const type = getContentType(mek.message);
