@@ -29,7 +29,7 @@ const { sms, downloadMediaMessage } = require("./lib/msg");
 const axios = require("axios");
 const { File } = require("megajs");
 
-const ownerNumber = ["94704101989"];
+const ownerNumber = config.OWNER_NUM;
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + "/auth_info_baileys/creds.json")) {
@@ -104,7 +104,7 @@ async function connectToWA() {
         },
         caption: up,
       });
-      robin.sendMessage("94704101989@s.whatsapp.net", {
+      robin.sendMessage("94705900209@s.whatsapp.net", {
         image: {
           url: `https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20robin%20cs.jpg`,
         },
@@ -125,6 +125,9 @@ async function connectToWA() {
       mek.key &&
       mek.key.remoteJid === "status@broadcast" &&
       config.AUTO_READ_STATUS === "true"
+      const isReact = m.message.reactionMessage ? true : false
+if(isReact) return 
+m.react("😏")
     ) {
       await robin.readMessages([mek.key]);
     }
