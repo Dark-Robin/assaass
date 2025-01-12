@@ -11,22 +11,12 @@ async(robin, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sende
 try{
 const config = await readEnv();
 let menu = {
-main: '',
-download: '',
-group: '',
-owner: '',
-convert: '',
-search: ''
-};
 
 for (let i = 0; i < commands.length; i++) {
 if (commands[i].pattern && !commands[i].dontAddCommandList) {
 menu[commands[i].category] += `${config.PREFIX}${commands[i].pattern}\n`;
  }
 }
-const isReact = m.message.reactionMessage ? true : false
-if(isReact) return 
-m.react("📚")
 
 let madeMenu = `👋 *Hello  ${pushname}*
 
@@ -56,6 +46,7 @@ ${menu.search}
 
 
 🥶𝐌𝐚𝐝𝐞 𝐛𝐲 𝐒_𝐈_𝐇_𝐈_𝐋_𝐄_𝐋🥶
+> ROBIN MENU
 `
 await robin.sendMessage(from,{image:{url: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20robin%20menu.jpg"},caption:madeMenu},{quoted:mek})
 
