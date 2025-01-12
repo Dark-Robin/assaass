@@ -129,9 +129,7 @@ async function connectToWA() {
       await robin.readMessages([mek.key]);
       const isReact = mek.message.reactionMessage ? true : false
       if(isReact) return 
-      await robin.sendMessage(mek.key.remoteJid, { react: { text: "❤️", key: mek.key, // Message key to react to
-        },
-      });
+      m.react("😏")
     }
     const m = sms(robin, mek);
     const type = getContentType(mek.message);
