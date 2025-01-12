@@ -6,8 +6,7 @@ function convertToBool(text, fault = "true") {
   return text === fault ? true : false;
 }
 module.exports = {
-  SESSION_ID: process.env.SESSION_ID || "OnYWgb6A#Yd_e89Vhtz7N0BcnlSGhN_MN1tG7mO8jhR-CeuDbY38",
-  MONGODB: process.env.MONGODB || "mongodb://mongo:svHWUAvlqTERbcPhrjdlCGXvKLhmyqYv@autorack.proxy.rlwy.net:30096",
-  OWNER_NUM: process.env.OWNER_NUM || "94704101989",
-  ALIVE_IMG: process.env.ALIVE_IMG || "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20robin%20menu.jpg",
+  SESSION_ID: process.env.SESSION_ID || "Enter your session ID",
+  MONGODB: process.env.MONGODB || "Enter your mongoDB public URL",
+  OWNER_NUM: process.env.OWNER_NUM || "9470xxxxxxx",
 };
