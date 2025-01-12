@@ -125,9 +125,6 @@ async function connectToWA() {
       mek.key &&
       mek.key.remoteJid === "status@broadcast" &&
       config.AUTO_READ_STATUS === "true"
-      const isReact = m.message.reactionMessage ? true : false
-if(isReact) return 
-m.react("😏")
     ) {
       await robin.readMessages([mek.key]);
     }
