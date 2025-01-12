@@ -11,6 +11,6 @@ module.exports = {
     "OnYWgb6A#Yd_e89Vhtz7N0BcnlSGhN_MN1tG7mO8jhR-CeuDbY38",
   MONGODB:
     process.env.MONGODB ||
-    "mongodb://mongo:LweItttnRVjxKUHLUWiYZqOluKletXEP@:",
+    "mongodb://mongo:svHWUAvlqTERbcPhrjdlCGXvKLhmyqYv@autorack.proxy.rlwy.net:30096",
   OWNER_NUM: process.env.OWNER_NUM || "94704101989",
 };
