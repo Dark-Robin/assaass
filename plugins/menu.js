@@ -24,9 +24,6 @@ if (commands[i].pattern && !commands[i].dontAddCommandList) {
 menu[commands[i].category] += `${config.PREFIX}${commands[i].pattern}\n`;
  }
 }
-const isReact = m.message.reactionMessage ? true : false
-if(isReact) return 
-m.react("📚")
 
 let madeMenu = `👋 *Hello  ${pushname}*
 
@@ -56,6 +53,8 @@ ${menu.search}
 
 
 🥶𝐌𝐚𝐝𝐞 𝐛𝐲 𝐒_𝐈_𝐇_𝐈_𝐋_𝐄_𝐋🥶
+
+> ROBIN MENU MSG
 `
 await robin.sendMessage(from,{image:{url: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20robin%20menu.jpg"},caption:madeMenu},{quoted:mek})
 
